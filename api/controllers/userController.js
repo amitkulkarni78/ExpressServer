@@ -3,7 +3,7 @@ module.exports = {
     getUsers : (req,res,next)=>{
         usermodule.getAllUsers().then((result)=>{
             if(result){
-                console.log("result received in controller : ",result);
+                //console.log("result received in controller : ",result);
                 res.send({
                     data: result,
                     message : "got all users",
@@ -14,7 +14,7 @@ module.exports = {
                 res.send({
                     
                     message : "error getting all users",
-                    status: true
+                    status: false
                 });
             }
 
@@ -23,7 +23,7 @@ module.exports = {
             res.send({
                 error: error,
                 message : "got all users",
-                status: true
+                status: false
             });
         })
         

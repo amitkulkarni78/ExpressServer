@@ -4,18 +4,26 @@
   "description": "this is a demo app , project structure expeted to change.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run:dev":"NODE_ENV=dev PORT=3200 node server.js",
-    "run:prod":"NODE_ENV=prod PORT=3200 ENV=prod.env node server.js",
-    "run:sit":"NODE_ENV=sit PORT=3200 node server.js",
-    "run:uat":"NODE_ENV=uat PORT=3200 node server.js"
+    "test": "mocha",
+    "run:dev": "NODE_ENV=dev PORT=3200 node server.js",
+    "run:prod": "NODE_ENV=prod PORT=3200 ENV=prod.env node server.js",
+    "run:sit": "NODE_ENV=sit PORT=3200 node server.js",
+    "run:uat": "NODE_ENV=uat PORT=3200 node server.js",
+    "run-win:dev": "SET NODE_ENV=dev&& SET PORT=3200&& SET ENV=dev&& node server.js",
+    "run-win:prod": "SET NODE_ENV=prod&& SET PORT=3200&& SET ENV=prod&& node server.j",
+    "run-win:sit": "SET NODE_ENV=sit&& SET PORT=3200&& SET ENV=sit&& node server.j",
+    "run-win:uat": "SET NODE_ENV=uat&& SET PORT=3200&& SET ENV=uat&& node server.j"
   },
   "author": "Amit Kulkarni",
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "jsonwebtoken": "^8.4.0",
+    "mocha": "^5.2.0",
+    "mysql": "^2.16.0",
+    "supertest": "^3.3.0"
   }
 }

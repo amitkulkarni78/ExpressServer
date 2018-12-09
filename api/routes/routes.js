@@ -1,9 +1,11 @@
 
-module.exports = function(app){
-    
-    require('./userRoutes')(app)    
-    require('./noteRoute')(app)
-    require('./birdRoute')(app)
-    require('./userRoute')(app)
+const userRoutes = require("./userRoutes");
+const bookRoutes = require("./bookRoutes");
+
+module.exports = {
+    routes : [
+        userRoutes,
+        bookRoutes
+    ]
     
 }
